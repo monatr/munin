@@ -50,9 +50,9 @@ def main():
     # getinfo variable is read from command name - probably the sym-link name.
     request_var = sys.argv[0].split('_', 1)[1] or 'balance'
     command = sys.argv[1] if len(sys.argv) > 1 else None
-    request_labels = {'balance': ('Wallet Balance', 'BTC'),
+    request_labels = {'balance': ('Wallet Balance', 'LTC'),
                       'connections': ('Peer Connections', 'Connections'),
-                      'fees': ("Tip Offered", "BTC"),
+                      'fees': ("Tip Offered", "LTC"),
                       'transactions': ("Transactions", "Transactions",
                                        ('confirmed', 'waiting')),
                       'block_age': ("Last Block Age", "Seconds"),
