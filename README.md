@@ -1,4 +1,4 @@
-Munin Plugins for bitcoind and litecoind
+Munin Plugins for cryptocurrency daemon.
 ========================================
 
 install in /usr/local/share/munin/plugins/
