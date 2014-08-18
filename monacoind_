@@ -57,6 +57,7 @@ def main():
                                        ('confirmed', 'waiting')),
                       'block_age': ("Last Block Age", "Seconds"),
                       'difficulty': ("Difficulty", ""),
+                      'networkhashps': ("Network Hashrate", "H/s"),
                       }
     labels = request_labels[request_var]
     if len(labels) < 3:
@@ -113,6 +114,11 @@ def main():
         (memory_pool, error) = monacoin.getrawmempool()
         if memory_pool:
             info['waiting'] = len(memory_pool)
+
+    if request_var in ('networkhashps'):
+        (networkhashps, error) = monacoin.getnetworkhashps()
+        if networkhashps:
+            info['networkhashps'] = networkhashps
 
     if command == 'autoconf':
         print 'yes'
